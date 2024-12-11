@@ -1,5 +1,15 @@
 #include "array.h"
-
+int sum(int* massive, int size, int begin, int end) {    
+    if (begin < 0 || end >= size || begin > end) {
+        printf("ќшибка: ”казаны неверные границы.\\n");
+        return 0; 
+    }
+    int total = 0;
+    for (int i = begin; i <= end; i++) {
+        total += massive[i];
+    }
+    return total;
+}
 int max(int left, int right) {
     return (left > right) ? left : right;
 }
